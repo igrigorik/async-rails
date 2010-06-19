@@ -13,10 +13,6 @@ gem 'em-synchrony',   :git => 'git://github.com/igrigorik/em-synchrony.git',    
 gem 'em-http-request',:git => 'git://github.com/igrigorik/em-http-request.git', :require => 'em-http'
 gem 'addressable', :require => 'addressable/uri'
 
-
-# require 'em-synchrony/em-http'
-
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
