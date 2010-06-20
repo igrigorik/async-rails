@@ -6,6 +6,12 @@ Simple async demo stack with Rails 3 + EventMachine and Fibers.
  * Hit localhost:3000/widgets/http to make an HTTP call back to /widgets - recursive! :-)
  * Hit localhost:3000/twitter to load a mounted async Sinatra app (reports latests rails 3 tweets)
 
+Howto / example commits:
+
+  * [Convert ActiveRecord to use async mysql driver](http://github.com/igrigorik/async-rails/commit/72ea38433246cc58cd31e3863f4ed4e0c861ad28)
+  * [Use async HTTP fetching within Rails](http://github.com/igrigorik/async-rails/commit/6307f3f416f21a40304d2f4a07509b923051744b)
+  * [Mount async Sinatra app](http://github.com/igrigorik/async-rails/commit/50c5e4fd6701dfa2b3ecfc697ca53b40f8c57827)
+
 Requirements:
 
  * Ruby 1.9.x
@@ -43,7 +49,8 @@ So, keep in mind that the size of 'database pool' is basically your concurrency 
 
 Resources:
 
- * http://www.slideshare.net/igrigorik/no-callbacks-no-threads-railsconf-2010
- * http://www.igvita.com/2010/06/07/rails-performance-needs-an-overhaul/
- * http://www.igvita.com/2010/04/15/non-blocking-activerecord-rails/
- * http://www.igvita.com/2010/03/22/untangling-evented-code-with-ruby-fibers/
+ * [No callbacks, No threads - RailsConf 2010 Presentation](http://www.slideshare.net/igrigorik/no-callbacks-no-threads-railsconf-2010)
+ * [Rails performance needs an overhaul](http://www.igvita.com/2010/06/07/rails-performance-needs-an-overhaul/)
+ * [Non-blocking ActiveRecord](http://www.igvita.com/2010/04/15/non-blocking-activerecord-rails/)
+ * [Untangling evented code with Ruby fibers](http://www.igvita.com/2010/03/22/untangling-evented-code-with-ruby-fibers/)
+ * [Introducing Phat, and Async Rails app](http://www.mikeperham.com/2010/04/03/introducing-phat-an-asynchronous-rails-app/)
