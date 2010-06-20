@@ -4,6 +4,7 @@ Simple async demo stack with Rails 3 + EventMachine and Fibers.
 
  * Hit localhost:3000/widgets to do a 1s async mysql query
  * Hit localhost:3000/widgets/http to make an HTTP call back to /widgets - recursive! :-)
+ * Hit localhost:3000/twitter to load a mounted async Sinatra app (reports latests rails 3 tweets)
 
 Requirements:
 
