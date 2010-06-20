@@ -2,14 +2,18 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0.beta4'
 
+# async wrappers
+gem 'rack-fiber_pool', :require => 'rack/fiber_pool'
+gem 'em-synchrony',   :git => 'git://github.com/igrigorik/em-synchrony.git', :require => [
+  'em-synchrony',
+  'em-synchrony/em-http'
+  ]
+
 # async activerecord requires
 gem 'mysqlplus',      :git => 'git://github.com/oldmoe/mysqlplus.git',        :require => 'mysqlplus'
 gem 'em-mysqlplus',   :git => 'git://github.com/igrigorik/em-mysqlplus.git',  :require => 'em-activerecord'
 
-gem 'rack-fiber_pool', :require => 'rack/fiber_pool'
-
 # async http requires
-gem 'em-synchrony',   :git => 'git://github.com/igrigorik/em-synchrony.git',    :require => 'em-synchrony/em-http'
 gem 'em-http-request',:git => 'git://github.com/igrigorik/em-http-request.git', :require => 'em-http'
 gem 'addressable', :require => 'addressable/uri'
 
