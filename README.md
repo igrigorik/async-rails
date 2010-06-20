@@ -37,6 +37,17 @@ ab -c 5 -n 10 http://127.0.0.1:3000/widgets/http
         Time taken for tests:   2.740 seconds
         Complete requests:      10
 
+We're running on a single reactor, so above is proof that we can execute HTTP+MySQL queries in non-blocking fashion on a single run loop. Pushing the stack on my MBP (pool = 200; env = production) results in:
+
+        concurrency       time
+          75              73.426
+          60              66.411
+          50              65.502
+          40              78.105
+          30              106.624
+
+Looks like a single thin on my MBP peaks ~50 req/s (with internal hit, so 100 req/s total). For more details see [http://gist.github.com/445603](http://gist.github.com/445603)
+
 Scenario:
 
  * AB opens 5 concurrent requests (10 total)
