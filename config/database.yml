@@ -3,7 +3,7 @@
 development:
   adapter: em_mysqlplus
   database: widgets
-  pool: 10
+  pool: 200
   timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
@@ -16,7 +16,7 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
+  adapter: em_mysqlplus
+  database: widgets
+  pool: 200
   timeout: 5000
