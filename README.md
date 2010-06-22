@@ -21,8 +21,10 @@ Requirements:
 Environment setup:
 
  * rvm install 1.9.2-preview3
- * rvm use 1.9.2-preview3%rails3
- * gem install rails3 --pre
+ * rvm gemset create async-rails
+ * rvm use 1.9.2-preview3@async-rails
+ * gem install rails --pre
+ * gem install thin
 
 Starting up Rails:
 

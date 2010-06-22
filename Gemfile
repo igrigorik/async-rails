@@ -4,8 +4,9 @@ gem 'rails', '3.0.0.beta4'
 gem 'sinatra'
 
 # async wrappers
-gem 'rack-fiber_pool', :require => 'rack/fiber_pool'
-gem 'em-synchrony',   :git => 'git://github.com/igrigorik/em-synchrony.git', :require => [
+gem 'eventmachine',     :git => 'git://github.com/eventmachine/eventmachine.git'
+gem 'rack-fiber_pool',  :require => 'rack/fiber_pool'
+gem 'em-synchrony',     :git => 'git://github.com/igrigorik/em-synchrony.git', :require => [
   'em-synchrony',
   'em-synchrony/em-http'
   ]
