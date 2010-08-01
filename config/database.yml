@@ -3,7 +3,7 @@
 development:
   adapter: em_mysqlplus
   database: widgets
-  pool: 200
+  pool: 250
   timeout: 5000
 
 # Warning: The database defined as "test" will be erased and

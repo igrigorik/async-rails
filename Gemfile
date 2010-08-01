@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.beta4'
+gem 'rails', '3.0.0.rc'
 gem 'sinatra'
 
 # async wrappers

@@ -31,26 +31,15 @@ Starting up Rails:
  * bundle install
  * thin -D start
 
-Test:
+## Concurrency
 
-ab -c 5 -n 10 http://127.0.0.1:3000/widgets/http
+ab -c 5 -n 10 http://127.0.0.1:3000/widgets/
 
         Concurrency Level:      5
         Time taken for tests:   2.740 seconds
         Complete requests:      10
 
-We're running on a single reactor, so above is proof that we can execute HTTP+MySQL queries in non-blocking fashion on a single run loop. Pushing the stack on my MBP (pool = 200; env = production) results in:
-
-        concurrency       time
-          75              73.426
-          60              66.411
-          50              65.502
-          40              78.105
-          30              106.624
-
-Looks like a single thin on my MBP peaks ~50 req/s (with internal hit, so 100 req/s total). For more details see [http://gist.github.com/445603](http://gist.github.com/445603)
-
-Scenario:
+We're running on a single reactor, so above is proof that we can execute HTTP+MySQL queries in non-blocking fashion on a single run loop / within single process:
 
  * AB opens 5 concurrent requests (10 total)
  * Each request to /widgets/http opens an async HTTP request to /widgets - aka, we ourselves spawn another 5 requests
@@ -59,6 +48,25 @@ Scenario:
 
 So, keep in mind that the size of 'database pool' is basically your concurrency throttle. In example above, we spawn
 10 requests, which open another 10 internally, so in total we process 20 req's in ~2s on a single thing server. Just as expected.
+
+## Benchmarks
+
+Pushing the stack on my MBP (db pool = 250; fiber pool = 250; env = production; thin 1.2.7) results in:
+
+        Concurrency Level:      220
+        Time taken for tests:   10.698 seconds
+        Complete requests:      2000
+        Failed requests:        0
+        Write errors:           0
+        Total transferred:      470235 bytes
+        HTML transferred:       12006 bytes
+        Requests per second:    186.95 [#/sec] (mean)
+        Time per request:       1176.777 [ms] (mean)
+        Time per request:       5.349 [ms] (mean, across all concurrent requests)
+        Transfer rate:          42.93 [Kbytes/sec] received
+
+For full AB trace see [this gist](http://gist.github.com/503627)
+
 
 Resources:
 
