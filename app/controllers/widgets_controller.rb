@@ -6,7 +6,7 @@ class WidgetsController < ApplicationController
 
   def http
     # going meta, query yourself, on the same thin server!
-    http = EM::HttpRequest.new("http://localhost:3000/widgets").get
+    http = EM::HttpRequest.new("http://#{request.host}:#{request.port}/widgets").get
     render :text => http.response
   end
 end
