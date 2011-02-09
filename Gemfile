@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.1'
+gem 'rails', '3.0.4'
 gem 'sinatra'
 
 # async wrappers
@@ -12,8 +12,7 @@ gem 'em-synchrony',     :git => 'git://github.com/igrigorik/em-synchrony.git', :
   ]
 
 # async activerecord requires
-gem 'mysqlplus',      :git => 'git://github.com/oldmoe/mysqlplus.git',        :require => 'mysqlplus'
-gem 'em-mysqlplus',   :git => 'git://github.com/igrigorik/em-mysqlplus.git',  :require => 'em-activerecord'
+gem 'mysql2'
 
 # async http requires
 gem 'em-http-request',:git => 'git://github.com/igrigorik/em-http-request.git', :require => 'em-http'

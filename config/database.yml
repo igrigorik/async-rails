@@ -1,7 +1,7 @@
 # SQLite version 3.x
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
 development:
-  adapter: em_mysqlplus
+  adapter: em_mysql2
   database: widgets
   username: root
   pool: 250
@@ -11,14 +11,14 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  adapter: em_mysqlplus
+  adapter: em_mysql2
   database: widgets_test
   username: root
   pool: 5
   timeout: 5000
 
 production:
-  adapter: em_mysqlplus
+  adapter: em_mysql2
   database: widgets
   username: root
   pool: 200
