@@ -12,7 +12,7 @@ gem 'em-synchrony',     :git => 'git://github.com/igrigorik/em-synchrony.git', :
   ]
 
 # async activerecord requires
-gem 'mysql2'
+gem 'mysql2', '~>0.2.10'
 
 # async http requires
 gem 'em-http-request',:git => 'git://github.com/igrigorik/em-http-request.git', :require => 'em-http'
