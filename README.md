@@ -8,7 +8,7 @@ Simple async demo stack with Rails 3 + EventMachine and Fibers.
 
 Howto / example commits:
 
-  * [Convert ActiveRecord to use async mysql driver](http://github.com/igrigorik/async-rails/commit/72ea38433246cc58cd31e3863f4ed4e0c861ad28)
+  * Configure ActiveRecord to use async mysql driver: [Gemfile](https://github.com/igrigorik/async-rails/blob/master/Gemfile#L16), and [database.yml](https://github.com/igrigorik/async-rails/blob/master/config/database.yml#L4)
   * [Use async HTTP fetching within Rails](http://github.com/igrigorik/async-rails/commit/6307f3f416f21a40304d2f4a07509b923051744b)
   * [Mount async Sinatra app](http://github.com/igrigorik/async-rails/commit/50c5e4fd6701dfa2b3ecfc697ca53b40f8c57827)
 
@@ -29,7 +29,7 @@ Environment setup:
 Starting up Rails:
 
  * bundle install
- * thin -D start
+ * bundle exec thin -D start
 
 ## Concurrency
 
@@ -66,7 +66,6 @@ Pushing the stack on my MBP (db pool = 250; fiber pool = 250; env = production; 
         Transfer rate:          42.93 [Kbytes/sec] received
 
 For full AB trace see [this gist](http://gist.github.com/503627)
-
 
 Resources:
 
