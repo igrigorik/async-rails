@@ -2,5 +2,7 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 
-use Rack::FiberPool
+# include Rack::FiberPool in your stack and
+# set the number of fibers in the pool (100 is the current defaukt)
+use Rack::FiberPool, :size => 100
 run AsyncRails3::Application
