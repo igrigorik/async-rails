@@ -15,11 +15,7 @@ gem 'jquery-rails'
 # async wrappers
 gem 'eventmachine',     :git => 'git://github.com/eventmachine/eventmachine.git'
 gem 'rack-fiber_pool',  :require => 'rack/fiber_pool'
-gem 'em-synchrony',     :git => 'git://github.com/igrigorik/em-synchrony.git', :require => [
-  'em-synchrony',
-  'em-synchrony/em-http',
-  'em-synchrony/activerecord'
-  ]
+gem 'em-synchrony', '1.0.0', :require => ['em-synchrony', 'em-synchrony/em-http', 'em-synchrony/activerecord']
 
 # async activerecord requires
 gem 'mysql2'

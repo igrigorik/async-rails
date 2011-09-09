@@ -14,13 +14,6 @@ GIT
       eventmachine (>= 1.0.0.beta.3)
       http_parser.rb (>= 0.5.2)
 
-GIT
-  remote: git://github.com/igrigorik/em-synchrony.git
-  revision: eb0e0f21d7b6955f9cd60c910e17953228408100
-  specs:
-    em-synchrony (1.0.0)
-      eventmachine (>= 1.0.0.beta.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -67,6 +60,8 @@ GEM
     daemons (1.1.4)
     em-socksify (0.1.0)
       eventmachine
+    em-synchrony (1.0.0)
+      eventmachine (>= 1.0.0.beta.1)
     erubis (2.7.0)
     execjs (1.2.4)
       multi_json (~> 1.0)
@@ -144,7 +139,7 @@ DEPENDENCIES
   addressable
   coffee-rails (~> 3.1.0)
   em-http-request!
-  em-synchrony!
+  em-synchrony (= 1.0.0)
   eventmachine!
   jquery-rails
   mysql2
