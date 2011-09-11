@@ -1,6 +1,6 @@
-# Async Rails 3 stack demo
+# Async Rails 3.1 stack demo
 
-Simple async demo stack with Rails 3 + EventMachine and Fibers.
+Simple async demo stack with Rails 3.1 + EventMachine and Fibers.
 
  * Hit localhost:3000/widgets to do a 1s async mysql query
  * Hit localhost:3000/widgets/http to make an HTTP call back to /widgets - recursive! :-)
@@ -17,15 +17,14 @@ Requirements:
 
  * Ruby 1.9.x
  * Async app server (thin)
- * Rails 3
+ * Rails 3.1
 
 Environment setup:
 
- * rvm install 1.9.2-preview3
+ * rvm install 1.9.2
  * rvm gemset create async-rails
- * rvm use 1.9.2-preview3@async-rails
- * gem install rails --pre
- * gem install thin
+ * rvm use 1.9.2@async-rails
+ * gem install rails thin
 
 Starting up Rails:
 
