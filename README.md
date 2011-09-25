@@ -1,6 +1,7 @@
 # Async Rails 3.1 stack demo
 
 Important warning:
+
   With rails 3.1 the stack can now be bigger than the maximum allowed size for a Fiber which can lead to
   unexpected stack overflow exceptions.
 
