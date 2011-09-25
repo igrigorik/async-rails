@@ -1,5 +1,9 @@
 # Async Rails 3.1 stack demo
 
+Important warning:
+  With rails 3.1 the stack can now be bigger than the maximum allowed size for a Fiber which can lead to
+  unexpected stack overflow exceptions.
+
 Simple async demo stack with Rails 3.1 + EventMachine and Fibers.
 
  * Hit localhost:3000/widgets to do a 1s async mysql query
