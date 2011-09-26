@@ -1,9 +1,10 @@
 # Async Rails 3.1 stack demo
 
 Important warning:
-
-  With rails 3.1 the stack can now be bigger than the maximum allowed size for a Fiber which can lead to
-  unexpected stack overflow exceptions.
+  
+  You should be aware when using fibers with Rails that you can get a stack overflow error if your stack grows  
+  bigger than 4Kb (which is enough for most things though), this got even worse with the 3.1 release in which  
+  you can easily overflow the stack, here is an example [here](https://github.com/schmurfy/assets_crash).
 
 Simple async demo stack with Rails 3.1 + EventMachine and Fibers.
 
