@@ -1,5 +1,11 @@
 # Async Rails 3.1 stack demo
 
+Important warning:
+  
+  You should be aware when using fibers with Rails that you can get a stack overflow error if your stack grows  
+  bigger than 4Kb (which is enough for most things though), this got even worse with the 3.1 release in which  
+  you can easily overflow the stack, here is an example [here](https://github.com/schmurfy/assets_crash).
+
 Simple async demo stack with Rails 3.1 + EventMachine and Fibers.
 
  * Hit localhost:3000/widgets to do a 1s async mysql query
