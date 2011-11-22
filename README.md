@@ -80,3 +80,7 @@ Resources:
  * [Non-blocking ActiveRecord](http://www.igvita.com/2010/04/15/non-blocking-activerecord-rails/)
  * [Untangling evented code with Ruby fibers](http://www.igvita.com/2010/03/22/untangling-evented-code-with-ruby-fibers/)
  * [Introducing Phat, and Async Rails app](http://www.mikeperham.com/2010/04/03/introducing-phat-an-asynchronous-rails-app/)
+
+Other: 
+
+ * [Postgres + Async Rails driver](https://github.com/leftbee/em-postgresql-adapter)
