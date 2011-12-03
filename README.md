@@ -84,4 +84,3 @@ Resources:
 Other: 
 
  * [Postgres + Async Rails driver](https://github.com/leftbee/em-postgresql-adapter)
- * [Fix: Asset Pipeline + Stack level too deep error](https://github.com/igrigorik/async-rails/wiki/Asset-Pipeline-+-Stack-Level-to-Deep)
